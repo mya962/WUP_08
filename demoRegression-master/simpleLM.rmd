@@ -43,7 +43,19 @@ summary.lm(agemodel)
 2. Age-->    ARsqrd: 0.55,  RST:81.47  
 The agemodel graph shows its points to be far away from the line, while the simp graph has plots closer to it.
 
+```{r}
+headlemodel <- lm(WEIGHT~HEADLEN,data=bears)
+plot(WEIGHT~HEADLEN,data=bears)
+abline(headlemodel)
+summary.lm(headlemodel)
+```
 
+Worst to best
+1. Age        -->   ARsrd: 0.55,        RST:81.47  
+2. Head length-->    ARsqrd:0.69,        RST:67.81  
+3. Neck       -->       ARsqrd:0.87,       RST:43.91  
+
+Comparing the Adjusted R-squared being higher at 0.69 and the agemodel Adjusted R-squared is 0.55, shows it being better than it but not high enough for simps Adjusted r-squared of 0.87.
 
 
 
